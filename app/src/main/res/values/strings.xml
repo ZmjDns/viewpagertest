@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">viewpagertest</string>
+    <string name="collect">收藏</string>
+    <string name="commitment">评论</string>
+    <string name="share">分享</string>
+    <string name="allCommitments">评论区</string>
+</resources>
