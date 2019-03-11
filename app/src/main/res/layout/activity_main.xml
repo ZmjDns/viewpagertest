@@ -31,4 +31,10 @@
         android:onClick="recyclerView"
         android:text="recycler"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="letAes"
+        android:text="AES"/>
+
 </LinearLayout>

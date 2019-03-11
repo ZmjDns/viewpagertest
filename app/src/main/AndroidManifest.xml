@@ -22,7 +22,8 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".verticalviewpager.TestVerticalViewPagerOneAct" />
         <activity android:name=".horizontalviewpager.TestHorizontalViewPagerOneAct" />
-        <activity android:name=".recyclerview.TestRecyclerViewOneAct"></activity>
+        <activity android:name=".recyclerview.TestRecyclerViewOneAct"/>
+        <activity android:name=".aes.TestAesAct"/>
     </application>
 
 </manifest>

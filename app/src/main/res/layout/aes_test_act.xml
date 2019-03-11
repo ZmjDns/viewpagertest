@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ed_ming_wen1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ncueswchubhec"/>
+
+        <EditText
+            android:id="@+id/ed_ming_wen2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="ncueswchubhec"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="encryptAA"
+            android:text="encrypt1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="encryptBB"
+            android:text="encrypt2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_mi_wen1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ncueswchubhec"/>
+
+        <TextView
+            android:id="@+id/tv_mi_wen2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="ncueswchubhec"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="decryptAA"
+            android:text="decrypt1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="decryptBB"
+            android:text="decrypt1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_jie_mi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ncueswchubhec"/>
+
+        <TextView
+            android:id="@+id/tv_jie_mi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="ncueswchubhec"/>
+
+    </LinearLayout>
+
+</LinearLayout>

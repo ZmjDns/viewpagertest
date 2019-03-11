@@ -1,5 +1,6 @@
 package com.zmj.viewpagertest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.splash_act);
+
+        startActivity(new Intent(this,MainActivity.class));
+
+        finish();
 
 
     }

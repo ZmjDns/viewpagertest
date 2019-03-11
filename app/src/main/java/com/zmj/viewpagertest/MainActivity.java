@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
+import com.zmj.viewpagertest.aes.TestAesAct;
 import com.zmj.viewpagertest.horizontalviewpager.TestHorizontalViewPagerOneAct;
 import com.zmj.viewpagertest.recyclerview.TestRecyclerViewOneAct;
 import com.zmj.viewpagertest.verticalviewpager.TestVerticalViewPagerOneAct;
@@ -35,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void recyclerView(View view){
         startActivity(new Intent(this, TestRecyclerViewOneAct.class));
+    }
+
+    public void letAes(View view){
+        startActivity(new Intent(this, TestAesAct.class));
     }
 
     @Override
