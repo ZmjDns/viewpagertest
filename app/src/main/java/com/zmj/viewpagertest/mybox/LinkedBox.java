@@ -7,20 +7,20 @@ package com.zmj.viewpagertest.mybox;
  * Time : 2019/3/11
  * Description :
  */
-public class LinkedBox extends BaseBox {
+public class LinkedBox implements BaseBox {
 
     @Override
-    int add() {
+    public int add() {
         return 0;
     }
 
     @Override
-    int getElement() {
+    public int getElement() {
         return 0;
     }
 
     @Override
-    int remove() {
+    public int remove() {
         return 0;
     }
 }

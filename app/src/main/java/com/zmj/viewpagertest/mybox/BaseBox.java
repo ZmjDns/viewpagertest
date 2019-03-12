@@ -7,9 +7,7 @@ package com.zmj.viewpagertest.mybox;
  * Time : 2019/3/11
  * Description :
  */
-public abstract class BaseBox {
-
-    private int[] data;
+public interface BaseBox {
 
     abstract int add();
 
