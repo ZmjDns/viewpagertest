@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/collection"/>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gv_pics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:numColumns="3"
+        android:verticalSpacing="4dp"/>
+
+
+    <EditText
+        android:id="@+id/ed_saySth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="说点什么"/>
+
+    <ImageView
+        android:id="@+id/iv_myPic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <Button
+        android:id="@+id/btn_releasePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发布"/>
+
+</LinearLayout>

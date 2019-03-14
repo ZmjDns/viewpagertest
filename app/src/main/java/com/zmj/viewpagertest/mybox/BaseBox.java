@@ -5,7 +5,7 @@ package com.zmj.viewpagertest.mybox;
  * Blog : https://blog.csdn.net/Zmj_Dns
  * DitHub : https://github.com/ZmjDns
  * Time : 2019/3/11
- * Description :
+ * Description :接口定义规则
  */
 public interface BaseBox {
 
