@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--自定义Banner小圆点-->
+    <declare-styleable name="BannerIndicator">
+        <!--圆点颜色-->
+        <attr name="selectColor" format="color"/>
+        <!--未选中圆点颜色-->
+        <attr name="unSelectColor" format="color"/>
+        <!--圆点大小-->
+        <attr name="radius" format="dimension"/>
+        <!--圆点间距大小-->
+        <attr name="space" format="dimension"/>
+    </declare-styleable>
+
     <!--自定义搜索框属性-->
     <declare-styleable name="SearchView">
         <attr name="imageWidth" format="dimension"/>
