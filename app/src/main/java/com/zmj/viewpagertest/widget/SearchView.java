@@ -45,7 +45,7 @@ public class SearchView extends AppCompatTextView {
     private void initPaint() {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setColor(textColor);
-        mPaint.setTextSize(textColor);
+        mPaint.setTextSize(textSize);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class SearchView extends AppCompatTextView {
             float textWidth = mPaint.measureText("请输入");
             float textHeight = getFontLeading(mPaint);
 
-            float dx = (getWidth() - imageWidth - textWidth -8) / 2;
+            float dx = (getWidth() - imageWidth - textWidth - 8) / 2;
             float dy = (getHeight() - imageWidth) / 2;
 
             canvas.save();
