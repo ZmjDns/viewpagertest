@@ -20,6 +20,9 @@ public class MySelfDefinedViewAct extends AppCompatActivity {
      * 1.drawable中编写layer-list文件（rating.xml）
      * 2.style中定义自己的样式  （MyRatingBar）
      * 3.在布局中引用RaringBar控件，style引用MyRatingBar
+     *
+     * 一定要注意  切图的形象图片，五角星不能顶到边，否则出现条形线
+     * 自定义背景图片下面有直线是因为图片上的五角星顶到边了
      */
     private RatingBar ratingBar;
 
