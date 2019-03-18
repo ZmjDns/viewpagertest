@@ -24,6 +24,7 @@
         <activity android:name=".horizontalviewpager.TestHorizontalViewPagerOneAct" />
         <activity android:name=".recyclerview.TestRecyclerViewOneAct"/>
         <activity android:name=".aes.TestAesAct"/>
+        <activity android:name=".selfdefinview.MySelfDefinedViewAct"/>
     </application>
 
 </manifest>

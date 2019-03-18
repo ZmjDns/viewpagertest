@@ -11,6 +11,7 @@ import com.squareup.picasso.Picasso;
 import com.zmj.viewpagertest.aes.TestAesAct;
 import com.zmj.viewpagertest.horizontalviewpager.TestHorizontalViewPagerOneAct;
 import com.zmj.viewpagertest.recyclerview.TestRecyclerViewOneAct;
+import com.zmj.viewpagertest.selfdefinview.MySelfDefinedViewAct;
 import com.zmj.viewpagertest.verticalviewpager.TestVerticalViewPagerOneAct;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void letAes(View view){
         startActivity(new Intent(this, TestAesAct.class));
+    }
+
+    public void selfWidget(View view){
+        startActivity(new Intent(this, MySelfDefinedViewAct.class));
     }
 
     @Override
