@@ -7,7 +7,6 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.webkit.HttpAuthHandler;
 import android.widget.Toast;
 
 import com.zmj.viewpagertest.weakref.MyHandler;

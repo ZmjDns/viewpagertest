@@ -30,5 +30,4 @@ public abstract class MyHandler<T> extends Handler {
     }
 
     protected abstract void handleMessage(Context context,Message msg);
-
 }
