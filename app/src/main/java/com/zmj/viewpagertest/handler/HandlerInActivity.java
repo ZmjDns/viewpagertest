@@ -47,10 +47,12 @@ public class HandlerInActivity extends AppCompatActivity {
 
             //****
 
-            Message msg = Message.obtain();//从全局池中返回一个message实例，避免多次创建（如new Message（））
+            //从全局池中返回一个message实例，避免多次创建（如new Message（））
+            Message msg = Message.obtain();
             msg.obj = "aaa";
             msg.what = 1;
             weakRefHandler.sendMessage(msg);
+
         }
     }
 
