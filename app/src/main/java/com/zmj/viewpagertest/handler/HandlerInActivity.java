@@ -86,6 +86,7 @@ public class HandlerInActivity extends AppCompatActivity {
         //避免Activity销毁时，MessageQueue中的消息未处理完，故此时应把对应的message清出队列
         weakRefHandler.removeCallbacks(workThread);//清除runnable对应的message
         weakRefHandler.removeMessages(1);    //清除what对应的message
+        //workThread  和 msg.what可以在使用后回收
         super.onDestroy();
     }
 
