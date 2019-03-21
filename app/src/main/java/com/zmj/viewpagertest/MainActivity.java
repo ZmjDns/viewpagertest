@@ -13,6 +13,7 @@ import com.zmj.viewpagertest.horizontalviewpager.TestHorizontalViewPagerOneAct;
 import com.zmj.viewpagertest.recyclerview.TestRecyclerViewOneAct;
 import com.zmj.viewpagertest.selfdefinview.MySelfDefinedViewAct;
 import com.zmj.viewpagertest.verticalviewpager.TestVerticalViewPagerOneAct;
+import com.zmj.viewpagertest.widget.CustomedDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void selfWidget(View view){
         startActivity(new Intent(this, MySelfDefinedViewAct.class));
+    }
+    public void customDialog(View view){
+        CustomedDialog customedDialog = new CustomedDialog(this);
+        customedDialog.show();
     }
 
     @Override

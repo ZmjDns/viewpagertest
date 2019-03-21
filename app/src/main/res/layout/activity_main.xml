@@ -41,6 +41,11 @@
         android:layout_height="wrap_content"
         android:onClick="selfWidget"
         android:text="selfWidget"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="customDialog"
+        android:text="自带软键盘dialog"/>
 
     <com.zmj.viewpagertest.widget.SearchView
         android:layout_width="match_parent"
