@@ -37,4 +37,22 @@
         <item name="android:maxHeight">28dp</item>
     </style>
 
+    <!--自带软键盘的dialog-->
+    <style name="MyDialogWithKeybord">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--是否悬浮在Activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否全屏-->
+        <item name="android:windowFullscreen">true</item>
+        <!--是否有标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--背景模糊的透明度-->
+        <item name="android:backgroundDimAmount">0.5</item>
+        <!--显示软件盘-->
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
+    </style>
+
 </resources>
