@@ -8,7 +8,7 @@ import android.os.Parcelable;
  * Blog : https://blog.csdn.net/Zmj_Dns
  * DitHub : https://github.com/ZmjDns
  * Time : 2019/3/22
- * Description :
+ * Description :实现Parcelable接口的实体类，用于Parcelable序列化传值
  */
 public class User implements Parcelable {
 
