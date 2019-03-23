@@ -10,10 +10,16 @@ import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.zmj.viewpagertest.aes.TestAesAct;
 import com.zmj.viewpagertest.horizontalviewpager.TestHorizontalViewPagerOneAct;
+import com.zmj.viewpagertest.parcelable.ParcelableUserList;
+import com.zmj.viewpagertest.parcelable.ReverceParcelableAct;
+import com.zmj.viewpagertest.parcelable.User;
 import com.zmj.viewpagertest.recyclerview.TestRecyclerViewOneAct;
 import com.zmj.viewpagertest.selfdefinview.MySelfDefinedViewAct;
 import com.zmj.viewpagertest.verticalviewpager.TestVerticalViewPagerOneAct;
 import com.zmj.viewpagertest.widget.CustomedDialog;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,6 +56,26 @@ public class MainActivity extends AppCompatActivity {
     public void customDialog(View view){
         CustomedDialog customedDialog = new CustomedDialog(this);
         customedDialog.show();
+    }
+
+    public void delieverData(View view){
+        User user1 = new User("AAA","AAAA",18,"man","I am AAA");
+        User user2 = new User("BBB","BBBB",19,"man","I am BBB");
+        User user3 = new User("CCC","CCCC",20,"man","I am CCC");
+        User user4 = new User("DDD","DDDD",21,"man","I am DDD");
+
+        ParcelableUserList userList = new ParcelableUserList();
+        List<User> list = new ArrayList<>();
+        list.add(user1);
+        list.add(user2);
+        list.add(user3);
+        list.add(user4);
+        userList.setSize(4);
+        userList.setUserList(list);
+
+        Intent intent = new Intent(this, ReverceParcelableAct.class);
+        intent.putExtra("userList",userList);
+        startActivity(intent);
     }
 
     @Override
