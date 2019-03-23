@@ -6,12 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.squareup.picasso.Picasso;
 import com.zmj.viewpagertest.aes.TestAesAct;
 import com.zmj.viewpagertest.horizontalviewpager.TestHorizontalViewPagerOneAct;
 import com.zmj.viewpagertest.parcelable.ParcelableUserList;
-import com.zmj.viewpagertest.parcelable.ReverceParcelableAct;
+import com.zmj.viewpagertest.parcelable.ReceiveParcelableAct;
 import com.zmj.viewpagertest.parcelable.User;
 import com.zmj.viewpagertest.recyclerview.TestRecyclerViewOneAct;
 import com.zmj.viewpagertest.selfdefinview.MySelfDefinedViewAct;
@@ -73,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         userList.setSize(4);
         userList.setUserList(list);
 
-        Intent intent = new Intent(this, ReverceParcelableAct.class);
+        Intent intent = new Intent(this, ReceiveParcelableAct.class);
         intent.putExtra("userList",userList);
         startActivity(intent);
     }

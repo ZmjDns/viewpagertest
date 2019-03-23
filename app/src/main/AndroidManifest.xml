@@ -25,6 +25,7 @@
         <activity android:name=".recyclerview.TestRecyclerViewOneAct"/>
         <activity android:name=".aes.TestAesAct"/>
         <activity android:name=".selfdefinview.MySelfDefinedViewAct"/>
+        <activity android:name=".parcelable.ReceiveParcelableAct"/>
     </application>
 
 </manifest>

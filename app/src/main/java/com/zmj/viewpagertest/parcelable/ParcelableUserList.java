@@ -3,6 +3,7 @@ package com.zmj.viewpagertest.parcelable;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,7 +22,9 @@ public class ParcelableUserList implements Parcelable {
     }
 
     protected ParcelableUserList(Parcel in) {
+        //this.userList = new ArrayList<>();
         size = in.readInt();
+        //in.readTypedList(userList,User.CREATOR);
         userList = in.createTypedArrayList(User.CREATOR);
     }
 
