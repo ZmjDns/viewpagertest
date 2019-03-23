@@ -3,12 +3,14 @@ package com.zmj.viewpagertest.parcelable;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+
 /**
  * Author : Zmj
  * Blog : https://blog.csdn.net/Zmj_Dns
  * DitHub : https://github.com/ZmjDns
  * Time : 2019/3/22
  * Description :实现Parcelable接口的实体类，用于Parcelable序列化传值
+ * Intent传递Serializable或Parcelable序列化的数据是有限的，所以尽量不要用Intent传值
  */
 public class User implements Parcelable {
 
