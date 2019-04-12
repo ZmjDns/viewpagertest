@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:theme="@style/AppTheme.Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".verticalviewpager.TestVerticalViewPagerOneAct" />
         <activity android:name=".horizontalviewpager.TestHorizontalViewPagerOneAct" />
-        <activity android:name=".recyclerview.TestRecyclerViewOneAct"/>
-        <activity android:name=".aes.TestAesAct"/>
-        <activity android:name=".selfdefinview.MySelfDefinedViewAct"/>
-        <activity android:name=".parcelable.ReceiveParcelableAct"/>
+        <activity android:name=".recyclerview.TestRecyclerViewOneAct" />
+        <activity android:name=".aes.TestAesAct" />
+        <activity android:name=".selfdefinview.MySelfDefinedViewAct" />
+        <activity android:name=".parcelable.ReceiveParcelableAct" />
+
+        <service
+            android:name=".downloadprocess.DownloadService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
