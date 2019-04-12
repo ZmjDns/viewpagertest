@@ -10,6 +10,7 @@ import android.os.IBinder;
 public class DownloadService extends Service {
 
     public DownloadService() {
+
     }
 
     @Override
