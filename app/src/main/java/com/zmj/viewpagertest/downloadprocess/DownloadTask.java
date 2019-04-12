@@ -19,7 +19,7 @@ import okhttp3.Response;
  * Time : 2019/4/9
  * Description :实现断点下载的AsyncTask
  */
-public class DownloadAsyncTask extends AsyncTask<String,Integer,Integer> {
+public class DownloadTask extends AsyncTask<String,Integer,Integer> {
 
     public static final int TYPE_SUCCESS = 0;
     public static final int TYPE_FAILED = 1;
@@ -32,7 +32,7 @@ public class DownloadAsyncTask extends AsyncTask<String,Integer,Integer> {
     private boolean isPaused = false;
     private int lastProgress;
 
-    public DownloadAsyncTask(DownloadListener listener) {
+    public DownloadTask(DownloadListener listener) {
         this.listener = listener;
     }
 
