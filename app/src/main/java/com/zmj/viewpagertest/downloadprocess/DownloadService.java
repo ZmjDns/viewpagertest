@@ -1,9 +1,11 @@
 package com.zmj.viewpagertest.downloadprocess;
 
+import android.app.Notification;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
+import android.widget.Toast;
 
 /**
  *下载数据Service类
@@ -49,6 +51,19 @@ public class DownloadService extends Service {
     }
 
     class DownloadBinder extends Binder {
+        public void startDownload(String url){
+            if (downloadTask == null){
+                downLoadUrl = url;
+                downloadTask = new DownloadTask(listener);
+                downloadTask.execute(downLoadUrl);
+                startForeground(1,getNotification("Downloading...",0));
+                Toast.makeText(DownloadService.this,"Downloading...",Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        private Notification getNotification(String title,int progress){
+            return null;
+        }
 
     }
 }
