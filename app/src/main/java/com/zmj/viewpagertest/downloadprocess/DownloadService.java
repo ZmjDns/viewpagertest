@@ -1,6 +1,7 @@
 package com.zmj.viewpagertest.downloadprocess;
 
 import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
@@ -24,12 +25,15 @@ public class DownloadService extends Service {
     private DownloadListener listener = new DownloadListener() {
         @Override
         public void onProgress(int progress) {
-
+            getNotificationManager().notify(1,getNotification("Downloading...",progress));
         }
 
         @Override
         public void onSuccess() {
-
+            downloadTask = null;
+            //下载成功时将前台服务通知关闭，并创建一个下载成功的通知
+            getNotificationManager().notify(1,getNotification("Download Success",-1));
+            Toast.makeText(DownloadService.this,"Download Success",Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -70,6 +74,10 @@ public class DownloadService extends Service {
 
 
 
+    }
+
+    private NotificationManager getNotificationManager(){
+        return (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     }
 
     private Notification getNotification(String title,int progress){
