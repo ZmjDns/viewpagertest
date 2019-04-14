@@ -38,16 +38,25 @@ public class DownloadService extends Service {
 
         @Override
         public void onFailed() {
-
+            downloadTask = null;
+            //下载失败将前台服务通知关闭，并创建一个下载失败的通知
+            getNotificationManager().notify(1,getNotification("DownLoad Failed",-1));
+            Toast.makeText(DownloadService.this,"Download Success",Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onPaused() {
-
+            downloadTask = null;
+            //暂停
+            getNotificationManager().notify(1,getNotification("Pause",-1));
+            Toast.makeText(DownloadService.this,"Download Paused",Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onCanceled() {
+            downloadTask = null;
+            stopForeground(true);
+            Toast.makeText(DownloadService.this,"Download Cancel",Toast.LENGTH_SHORT).show();
 
         }
     };
