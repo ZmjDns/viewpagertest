@@ -81,8 +81,6 @@ public class DownloadService extends Service {
 
         }
 
-
-
     }
 
     private NotificationManager getNotificationManager(){
