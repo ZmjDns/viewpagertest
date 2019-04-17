@@ -70,7 +70,10 @@ public class PicFragment extends BaseLazyFragment {
         tv_allCommitmentArea = view.findViewById(R.id.tv_allCommitmentArea);
         el_expList = view.findViewById(R.id.el_expList);
         //Glide.with(container.getContext()).load(mUrl).placeholder(R.drawable.palceholder).into(iv_pic);
-        Picasso.with(container.getContext()).load(mUrl).placeholder(R.drawable.palceholder).into(iv_pic);
+        Picasso.with(container.getContext())
+                .load(mUrl)
+                .placeholder(R.drawable.palceholder)
+                .into(iv_pic);
         initListener();
         return view;
     }
