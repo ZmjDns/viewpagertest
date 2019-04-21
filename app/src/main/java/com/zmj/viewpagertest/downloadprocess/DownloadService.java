@@ -80,6 +80,17 @@ public class DownloadService extends Service {
             }
 
         }
+        public void pausedDownload(){
+            if (downloadTask != null){
+                downloadTask.pauseDownload();
+            }
+        }
+
+        public void cancelDownload(){
+            if (downloadTask != null){
+                downloadTask.cancelDownload();
+            }
+        }
 
     }
 
