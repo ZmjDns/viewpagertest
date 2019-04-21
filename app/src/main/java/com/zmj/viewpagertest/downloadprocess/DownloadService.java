@@ -7,12 +7,15 @@ import android.app.Service;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Binder;
+import android.os.Environment;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
 import com.zmj.viewpagertest.MainActivity;
 import com.zmj.viewpagertest.R;
+
+import java.io.File;
 
 /**
  *下载数据Service类
@@ -90,7 +93,17 @@ public class DownloadService extends Service {
             if (downloadTask != null){
                 downloadTask.cancelDownload();
             }
+            if (downLoadUrl != null){
+                //取消下载时须将文件删除，并将通知关闭
+                String fileName = downLoadUrl.substring(downLoadUrl.lastIndexOf("/"));
+                String directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
+                File file = new File(directory + fileName);
+                if (file.exists()){
+                    file.delete();
+                }
+            }
         }
+
 
     }
 
