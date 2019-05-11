@@ -63,8 +63,6 @@ public class SmartLayoutAct extends AppCompatActivity {
 
     private void initSRL(){
 
-
-
         srl_refresh.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(@NonNull final RefreshLayout refreshLayout) {
