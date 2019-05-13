@@ -19,6 +19,7 @@ import com.zmj.viewpagertest.entry.User;
 import com.zmj.viewpagertest.entry.Work;
 import com.zmj.viewpagertest.net.RetrofitSingleton;
 import com.zmj.viewpagertest.utils.WidgetUtil;
+import com.zmj.viewpagertest.widget.RecyclerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +56,7 @@ public class SmartLayoutAct extends AppCompatActivity {
         initNewWorkList();
         cardViewAdapter = new CardViewAdapter(R.layout.recycler_card_view_item,workList);
         gridLayoutManager = new GridLayoutManager(this,2, LinearLayoutManager.VERTICAL,false);
+        rv_cardRV.addItemDecoration(new RecyclerItemDecoration(10,2));
         rv_cardRV.setLayoutManager(gridLayoutManager);
         rv_cardRV.setAdapter(cardViewAdapter);
 
@@ -80,6 +82,7 @@ public class SmartLayoutAct extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<List<Work>> call, Throwable t) {
+                        refreshLayout.finishRefresh();
                         WidgetUtil.showToast(SmartLayoutAct.this,"刷新失败");
                         Log.d("刷新失败", "onFailure: 刷新失败:" + t.getMessage());
                     }
@@ -103,6 +106,7 @@ public class SmartLayoutAct extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<List<Work>> call, Throwable t) {
+                        refreshLayout.finishLoadMore();
                         WidgetUtil.showToast(SmartLayoutAct.this,"加载失败");
                         Log.d("加载失败", "onFailure: 加载失败:" + t.getMessage());
                     }
