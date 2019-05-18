@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="#FFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48">
+
+                <ImageView
+                    android:id="@+id/iv_header"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_18"
+                    android:src="@drawable/share_head"/>
+
+                <TextView
+                    android:id="@+id/tv_authorNick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:text="author"
+                    android:textColor="#414141"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/rv_workPics"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:nestedScrollingEnabled="false"
+                    app:canLoop="true"/>
+
+                <com.zmj.viewpagertest.widget.BannerIndicator
+                    android:id="@+id/bi_picBanner"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_centerInParent="true"
+                    android:layout_alignBottom="@+id/rv_workPics"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.zmj.viewpagertest.widget.ExpendTextView
+                    android:id="@+id/tv_workDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:lineSpacingExtra="@dimen/dp_2"
+                    android:letterSpacing="0.05"
+                    android:textColor="@color/dark"
+                    android:minLines="2"
+                    android:text="地址"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_12">
+
+                    <TextView
+                        android:id="@+id/tv_workShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_18"
+                        android:drawableStart="@drawable/detail_share"
+                        android:drawablePadding="@dimen/dp_4"
+                        android:text="@string/share"/>
+
+                    <TextView
+                        android:id="@+id/tv_workCollect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/collection_null"
+                        android:drawablePadding="@dimen/dp_4"
+                        android:text="20"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>

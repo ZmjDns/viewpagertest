@@ -3,9 +3,21 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <!--导航栏底色-->
         <item name="colorPrimary">@color/colorPrimary</item>
+        <!--状态栏底色-->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--导航栏上的标题颜色-->
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <!--activity窗口的颜色-->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!--按钮选中或点击获取焦点后的颜色-->
         <item name="colorAccent">@color/colorAccent</item>
+        <!--和colorAccent相反，正常状态下按钮的颜色-->
+        <item name="colorControlNormal">@color/design_default_color_primary</item>
+        <!--EditText 输入框中字体的颜色-->
+        <item name="editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/holo_blue_light</item>
     </style>
 
     <!--启动界面初始背景-->
